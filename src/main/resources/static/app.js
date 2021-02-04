@@ -19,7 +19,8 @@ class App extends React.Component {
             '/people',
             {
                 name:this.state.newPersonName,
-                age:this.state.newPersonAge,
+                email:this.state.newPersonEmail,
+                password: this.state.newPersonPassword
             }
         ).then(
             (response) => {
@@ -30,9 +31,15 @@ class App extends React.Component {
         )
     }
 
-    changeNewPersonAge = (event) => {
+    changeNewPersonPassword = (event) => {
         this.setState({
-            newPersonAge:event.target.value
+            newPersonPassword:event.target.value
+        });
+    }
+
+    changeNewPersonEmail = (event) => {
+        this.setState({
+            newPersonEmail:event.target.value
         });
     }
 
@@ -94,8 +101,9 @@ class App extends React.Component {
             <h2>Create Person</h2>
             <form onSubmit={this.createPerson}>
                 <input onKeyUp={this.changeNewPersonName} type="text" placeholder="name" /><br/>
-                <input onKeyUp={this.changeNewPersonAge} type="number" placeholder="age" /><br/>
-                <input type="submit" value="Create Person" />
+                <input onKeyUp={this.changeNewPersonEmail} type="text" placeholder="email" /><br/>
+                <input onKeyUp={this.changeNewPersonPassword} type="password" placeholder="password" /><br/>
+                <input type="submit" value="Create Account" />
             </form>
             <h2>List of People</h2>
             <ul>
@@ -104,7 +112,7 @@ class App extends React.Component {
                         (person, index) => {
                             return <li key={index}>
 
-                                {person.name}: {person.age}
+                                {person.name}: {person.email}: {person.password}
 
                                 <button value={person.id} onClick={this.deletePerson}>DELETE</button>
 

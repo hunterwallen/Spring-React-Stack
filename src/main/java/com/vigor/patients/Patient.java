@@ -1,4 +1,4 @@
-package com.generalassembly.contacts;
+package com.vigor.patients;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,14 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Person {
+public class Patient {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
   private Integer id;
 
   private String name;
 
-  private Integer age;
+  private String email;
+
+  private String password;
+
+
+  //set id
 
   public Integer getId() {
     return id;
@@ -23,6 +28,9 @@ public class Person {
     this.id = id;
   }
 
+
+  //set name
+
   public String getName() {
     return name;
   }
@@ -31,11 +39,25 @@ public class Person {
     this.name = name;
   }
 
-  public Integer getAge() {
-    return age;
+
+  //set email
+
+  public String getEmail() {
+    return email;
   }
 
-  public void setAge(Integer age) {
-    this.age = age;
+  public void setEmail(String email) {
+    this.email = email;
   }
+
+
+  //set password
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
 }
