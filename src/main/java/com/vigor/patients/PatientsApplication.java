@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 @SpringBootApplication
@@ -46,5 +47,9 @@ public class PatientsApplication {
 		patientRepository.save(patientData);
 		return patientRepository.findAll();
 	}
+
+
+
+
 
 }
