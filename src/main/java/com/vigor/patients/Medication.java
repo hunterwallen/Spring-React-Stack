@@ -95,14 +95,14 @@ public class Medication {
   }
 
 
-  //set refillsLeft
+  //set refillDate
 
-  public Integer getRefillDate() {
-    return refillsLeft;
+  public String getRefillDate() {
+    return refillDate;
   }
 
-  public void setRefillDate(Integer refillsLeft) {
-    this.refillsLeft = refillsLeft;
+  public void setRefillDate(String refillDate) {
+    this.refillDate = refillDate;
   }
 
 
