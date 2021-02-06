@@ -27,7 +27,7 @@ public class Medication {
 
   private String refillFrequencyUnit;
 
-  private Integer patientId;
+  private String patientId;
 
 
   //set id
@@ -132,11 +132,11 @@ public class Medication {
 
   //set patientId
 
-  public Integer getPatientId() {
+  public String getPatientId() {
     return patientId;
   }
 
-  public void setPatientId(Integer patientId) {
+  public void setPatientId(String patientId) {
     this.patientId = patientId;
   }
 

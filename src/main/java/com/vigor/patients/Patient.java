@@ -15,7 +15,8 @@ public class Patient {
 
   private String email;
 
-  private String password;
+  private String firestoreId;
+
 
 
   //set id
@@ -51,13 +52,13 @@ public class Patient {
   }
 
 
-  //set password
-  public String getPassword() {
-    return password;
+  //set firestoreId
+  public String getFirestoreId() {
+    return firestoreId;
   }
 
-  public void setPassword(String password) {
-    this.password = password;
+  public void setFirestoreId(String firestoreId) {
+    this.firestoreId = firestoreId;
   }
 
 }
