@@ -29,6 +29,11 @@ public class MedicationsApplication {
 		return medicationRepository.findAll();
 	}
 
+	@GetMapping("/medications/{patientId}")
+	public Iterable<Medication> findBypatientId(@PathVariable String patientId) {
+		return medicationRepository.findBypatientId(patientId);
+	}
+
 	@PostMapping("/medications")
 	public Iterable<Medication> create (@RequestBody Medication medicationData) {
 		medicationRepository.save(medicationData);
